@@ -1,42 +1,41 @@
-Twisted AutoJoin – README
+TWISTED AUTOJOINER
 Overview
 
-Twisted AutoJoiner is an AutoHotkey v2 script designed to automatically attempt joining a Roblox server repeatedly until successful.
-It includes a compact draggable GUI, a Start/Stop controller, saved window position, built-in instructions for setup, and automatic detection of the Roblox window.
+Twisted AutoJoiner is an AutoHotkey v2 script that repeatedly attempts to join a Roblox game server until successful.
+It includes a draggable interface, start/stop controls, automatic Roblox window detection, and setup instructions on first launch.
 
 This tool is intended for personal testing and automation only.
-Usage in online games may violate their Terms of Service—use responsibly.
 
-Features
+FEATURES
 
-✔️ Auto-detects Roblox window (supports multiple Roblox executables)
+Auto-detects Roblox window (supports multiple executable names)
 
-✔️ Automatically clicks Join/OK buttons when available
+Automatically clicks Join / OK buttons
 
-✔️ Looping auto-join attempts with status display
+Looping auto-join attempts with real-time status
 
-✔️ GUI with Start/Stop buttons
+GUI with Start/Stop controls
 
-✔️ Saves window position via Windows Registry
+Saves window position
 
-✔️ First-run setup instructions popup
+First-run setup guide
 
-✔️ Draggable custom title bar
+Draggable custom title bar
 
-Requirements
+REQUIREMENTS
 
 AutoHotkey v2
-Download: https://www.autohotkey.com/
+https://www.autohotkey.com/
 
 Roblox must be:
 
 Open and visible
 
-In a position where the script can detect and click UI buttons
+Using Roblox's Navigation Mode
 
-Using Navigation Mode enabled in Roblox settings (as indicated in the instructions)
+Positioned so UI buttons can be clicked by the script
 
-How to Use
+HOW TO USE
 
 Install AutoHotkey v2.
 
@@ -45,17 +44,17 @@ Run the script:
 TwistedAutojoiner.ahk
 
 
-On first launch, a Setup Instructions window will appear. Follow the steps.
+Read the Setup Instructions on first launch.
 
-Click Start to begin auto-joining attempts.
+Press Start to begin the auto-join process.
 
-Click Stop to end the loop.
+Press Stop to end it.
 
 Close the window to save its position and exit.
 
-How It Works (Technical Summary)
+TECHNICAL DETAILS
 
-The script looks for an active Roblox window using executable names like:
+The script attempts to detect Roblox using executable names such as:
 
 RobloxPlayerBeta.exe
 
@@ -63,30 +62,28 @@ RobloxPlayer.exe
 
 RobloxLauncher.exe
 
-When running, it:
+Once running, it continuously:
 
-Repeatedly scans for the Roblox window
+Searches for an active Roblox window
 
-Sends ControlClick events to common Join/OK buttons
+Sends ControlClick events to join-related UI elements
 
-Performs fallback Click() attempts if controls fail
+Uses fallback click attempts if controls are not detected
 
-UI and settings are stored under:
+Configuration is saved to the Windows Registry under:
 
 HKEY_CURRENT_USER\Software\TwistedAutoJoin
 
-Hotkeys
+CONTROLS
 
-The script does not use global hotkeys—controls are GUI-based:
+The script uses a graphical interface:
 
-Start – begins the auto-join loop
+Start – Begin auto-join loop
+Stop – Stop auto-join loop
+Close (X) – Exit and save window position
 
-Stop – stops the loop
+DISCLAIMER
 
-X (close) – exits the script and saves UI position
-
-Disclaimer
-
-This tool is for personal educational/testing use.
-Using automation in Roblox or other online games may violate their Terms of Service.
+This script is for personal educational/testing purposes.
+Automating actions in Roblox or other online services may violate Terms of Service.
 Use at your own risk.
